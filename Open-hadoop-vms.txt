@@ -1,0 +1,4 @@
+To Get the required vms: 
+	Get-VM | where { $_.Name -like "Ubuntu 18.04*" }
+To stop the vms which are running: 
+	Get-VM | where { $_.Name -like "Ubuntu 18.04*" } | where { $_.State -eq "Running" } | Stop-VM
